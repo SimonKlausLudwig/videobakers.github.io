@@ -13,9 +13,32 @@
           content="Gratis Erklärvideo für Dich | Gratis Testen | Keine Anzahlung | Zufriedenheitsgarantie | Kein Abo. | Video wird in Kooperation mit dir erstellt">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Videobakers Erklärvideo Gratis testen</title>
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700|Arimo:400,700" rel="stylesheet">
+    <link href="fonts/fonts.css" rel="stylesheet">
+    <link href="font2/fonts.css" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#eaf7f7",
+                        "text": "#5c7291"
+                    },
+                    "button": {
+                        "background": "#56cbdb",
+                        "text": "#ffffff"
+                    }
+                },
+                "content": {
+                    "message": "Diese Webseite benutzt Cookies. Wenn du die Seite weiter nutzt, gehen wir von deinem Einverständnis aus. ",
+                    "dismiss": "Verstanden",
+                    "link": "Datenschutz",
+                    "href": "http://videobakers.de/datenschutz"
+                }
+            })});
+    </script>
 </head>
 <body class="is-boxed has-animations">
 <div class="body-wrap boxed-container">
@@ -73,10 +96,6 @@
                             <li class="is-revealing">
                                 <img src="dist/images/mario.png"
                                      title="Mario Lopez - Friseursalon mit einem schönen Video" alt="Mario Lopez logo">
-                            </li>
-                            <li class="is-revealing">
-                                <img title="Zufriedener Videobakers Kunde" src="dist/images/flower.png"
-                                     alt="Flower logo">
                             </li>
                         </ul>
                     </div>
@@ -456,7 +475,12 @@
             <div class="container">
                 <div class="cta-inner section-inner is-revealing" STYLE="DISPLAY: FLEX;
     FLEX-DIRECTION: column;">
-                    <h2 class="section-title mt-0">Noch nicht überzeugt ?</h2>
+                    <h2 class=" mt-0 pr-0">Noch nicht überzeugt ?</h2>
+                    <p>Ruf einfach an und wir besprechen Dein Vorhaben persönlich.</p>
+                    <a href="tel:+491738517916" class="mb-32 button button-primary button-shadow">
+                        0173 - 851 79 16
+                    </a>
+
                     <p class="section-paragraph mb-0 mt-8">Wir erstellen dir dein Erklärvideo mit
                         Zufriedenheitsgarantie. Lasse dir von uns abstrakte Konzepte einfach und verständlich als
                         qualitativ hochwertiges Video darstellen.</p>
@@ -491,12 +515,15 @@
             <div class="site-footer-inner">
                 <div class="brand footer-brand">
                     <a href="#">
-                        <img title="Videobaker logo" src="dist/images/logo.svg" alt="Videobakers logo">
+                        <img title="Videobaker logo" src="favicon.ico" alt="Videobakers logo">
                     </a>
                 </div>
                 <ul class="footer-links list-reset">
                     <li>
                         <a href="/impressum.html">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="/datenschutz.html">Datenschutz</a>
                     </li>
                 </ul>
                 <ul class="footer-social-links list-reset">
@@ -526,7 +553,7 @@
                     </li>
 
                 </ul>
-                <div class="footer-copyright">&copy; 2019 Videobakers, all rights reserved</div>
+                <div class="footer-copyright">&copy; 2019 Videobakers, Made with Love in Hessen</div>
             </div>
         </div>
     </footer>
@@ -548,6 +575,17 @@
 <script>
     gtag('event', 'conversion', {'send_to': 'AW-747903989/sWFaCIa25KABEPW30OQC'});
 </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141763566-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141763566-1');
+</script>
+
 
 </body>
 </html>
