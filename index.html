@@ -156,7 +156,7 @@
                                     <img src="dist/images/feature-icon-03.svg" title="Schritt 3 zum Erklärvideo"
                                          alt="Visualisierung Vogel">
                                 </div>
-                                <h3 style="font-size: 18px;" class="feature-title">Wir erstellen dein Erklärvideo</h3>
+                                <h3 style="font-size: 18px;line-height: 25px;" class="feature-title">Wir erstellen dein Erklärvideo</h3>
                                 <p class="text-sm">Innerhalb einer Woche erhältst du einen ersten Entwurf deines
                                     Videos.</p>
                             </div>
@@ -502,7 +502,7 @@
                         Zufriedenheitsgarantie. Lasse dir von uns abstrakte Konzepte einfach und verständlich als
                         qualitativ hochwertiges Video darstellen.</p>
                     <div style="width: 100%">
-                        <form action="https://formspree.io/simon-ludwig@live.de" method="POST"
+                        <form id="contactform" onclick="return gtag_report_conversion()" action="https://formspree.io/simon-ludwig@live.de" method="POST"
                               style="    display: grid;
     grid-auto-flow: row;
     /* flex-direction: column; */
@@ -592,9 +592,16 @@
     gtag('config', 'AW-747903989');
 </script>
 
-<!-- Event snippet for Kontaktaufnahme conversion page -->
+<!-- Event snippet for Kontaktaufnahme conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-    gtag('event', 'conversion', {'send_to': 'AW-747903989/sWFaCIa25KABEPW30OQC'});
+    function gtag_report_conversion() {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-747903989/sWFaCIa25KABEPW30OQC',
+            'event_callback': callback
+        });
+        return false;
+    }
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
