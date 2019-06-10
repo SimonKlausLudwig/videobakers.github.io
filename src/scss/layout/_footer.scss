@@ -15,8 +15,8 @@
 }
 
 .site-footer-inner {
-    position: relative; /* To display all elements above the background color */
-    display: flex;
+    display: grid;
+    justify-content: center;
     flex-wrap: wrap;
     padding-top: 48px;
     padding-bottom: 48px;
@@ -63,7 +63,6 @@
 @include media( '>medium' ) {
 
     .site-footer-inner {
-        justify-content: space-between;
 		padding-top: 80px;
 		padding-bottom: 64px;
     }
@@ -77,16 +76,15 @@
 
     .footer-brand,
     .footer-copyright {
-        justify-content: flex-start;
+
     }
 
     .footer-links,
     .footer-social-links {
-        justify-content: flex-end;
+
     }
 
     .footer-links {
-        order: 1;
         margin-bottom: 0;
     }
 }
