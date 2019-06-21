@@ -2,99 +2,240 @@
 # Variables, functions and mixins
 --------------------------------------------------------------*/
 @import "abstracts/variables",
-        "abstracts/functions",
-        "abstracts/mixins",
-        'abstracts/include-media';
-
+"abstracts/functions",
+"abstracts/mixins",
+'abstracts/include-media';
 /*--------------------------------------------------------------
 1.0 Normalize
 	* normalize.css v7.0.0 | MIT License
 	* github.com/necolas/normalize.css
 --------------------------------------------------------------*/
 @import "normalize";
-
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
 @import "base/base";
-
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 @import "base/typography";
-
 /*--------------------------------------------------------------
 # Helpers
 --------------------------------------------------------------*/
 @import "base/helpers";
-
 /*--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
 @import "components/buttons";
-
 /*--------------------------------------------------------------
 # Accordion
 --------------------------------------------------------------*/
 @import "components/accordion";
-
 /*--------------------------------------------------------------
 # Tabs
 --------------------------------------------------------------*/
 @import "components/tabs";
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 @import "layout/header";
-
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
 @import "layout/hero";
-
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
 @import "layout/clients";
-
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
 @import "layout/features";
-
 /*--------------------------------------------------------------
 # Features tabs
 --------------------------------------------------------------*/
 @import "layout/features-tabs";
-
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
 @import "layout/testimonials";
 @import "layout/testimonals2";
-
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
 @import "layout/pricing";
-
 /*--------------------------------------------------------------
 # CTA
 --------------------------------------------------------------*/
 @import "layout/cta";
-
 /*--------------------------------------------------------------
 # Site content
 --------------------------------------------------------------*/
 @import "layout/main";
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 @import "layout/footer";
 
 
-li{
-        z-index: 100000;
+li {
+  z-index: 100000;
+}
+
+.dot_img {
+  position: absolute;
+  left: 40px;
+  top: 88px;
+  width: 641px;
+  height: 2785px;
+  min-width: 641px;
+  max-width: 641px;
+  max-height: 2785px;
+  min-height: 2785px;
+}
+
+.step_img {
+  position: absolute;
+}
+
+.step_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    padding: 40px;
+  }
+
+  img{
+    padding: 40px;
+  }
+}
+
+.step_text {
+  margin-top: 20px;
+  color: #889BB0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+.step {
+  padding: 40px 40px;
+  border-left: 1px dashed #ececec;
+  position: relative;
+}
+
+.step-three, .step-two-image, .step-one, .step-four-image{
+  border-bottom: 1px dashed #ececec;
+}
+
+
+
+
+.steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 40px;
+  align-items: stretch;
+}
+
+
+@media (max-width: 641px) {
+  .steps{
+    grid-template-columns: 1fr;
+  }
+
+  .step-one-image{
+    grid-row: 2;
+  }
+  .step-one{
+    grid-row: 1;
+  }
+
+  .step-two{
+    grid-row: 3;
+  }
+
+  .step-two-image{
+    grid-row: 4;
+  }
+
+  .step-three{
+    grid-row: 5;
+  }
+
+  .step-three-image{
+    grid-row: 6;
+  }
+
+  .step-four{
+    grid-row: 7;
+  }
+
+  .step-four-image{
+    grid-row: 8;
+  }
+
+
+
+  .step-one-image, .step-two, .step-three-image,.step-four-image, .step-four{
+    border-bottom: 1px dashed #ececec;
+  }
+
+  .step-one-image, .step-three-image, .step-two-image, .step-four-image{
+    border-right: 1px dashed #ececec;
+  }
+}
+@media (max-width: 900px) {
+  .dot_img {
+    display: none;
+  }
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(255,161,39,0.161);
+  display: block;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  z-index: 1;
+}
+
+.dot .dot1 {
+  position: absolute;
+  left: 50%;
+  margin-top: -4px;
+  margin-left: -4px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #feb85d;
+}
+
+.dot .dot2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(254, 184, 93, 0.8);
+  -webkit-animation: pulsate 3s infinite;
+  animation: pulsate 3s infinite;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  will-change: transform;
 }
