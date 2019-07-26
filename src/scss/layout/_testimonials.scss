@@ -37,8 +37,9 @@
 }
 
 .testimonials-wrap {
-    display: flex;
     flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: auto auto;
 	// align-items: flex-start; /* Disable equal height */
     justify-content: center;
 	margin-right: -12px;
