@@ -1,0 +1,12 @@
+details{
+    width: 100%;
+}
+
+summary{
+    width: 100%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 20px;
+    margin: 0 0 30px 0;
+    color: #808ab8;
+}

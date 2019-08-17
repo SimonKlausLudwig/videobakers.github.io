@@ -1,0 +1,5 @@
+.voice .playbutton{
+    width: 60px;
+    filter: brightness(0) invert(1);
+    margin: 20px 0px 0px;
+}

@@ -1,0 +1,67 @@
+.blockstrol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+    grid-column-gap: 100px;
+    border-top: 1px solid rgba(161, 161, 161, 0.11);
+    margin-bottom: 88px;
+    padding-top: 88px;
+
+}
+
+.blockstrol p {
+    grid-row: 2;
+    grid-column: 1;
+    text-align: left;
+    margin: 0 0 20px;
+    align-self: flex-start;
+}
+
+.blockstrol a {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.blockstrol .content {
+    grid-row: 1/4;
+    grid-column: 2;
+}
+
+.blockstrol h2 {
+    grid-row: 1;
+    grid-column: 1;
+    margin-bottom: 12px;
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+@media (max-width: 641px) {
+    .blockstrol {
+        grid-template-columns: 1fr;
+
+    }
+
+    .blockstrol h2{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .blockstrol p{
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .blockstrol .content{
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    .blockstrol a{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        grid-row: 4;
+        grid-column: 1;
+    }
+}
